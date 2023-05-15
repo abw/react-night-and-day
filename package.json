@@ -1,7 +1,7 @@
 {
   "name": "@abw/react-night-and-day",
   "version": "0.0.1",
-  "description": "A description for react-night-and-day",
+  "description": "A simple React library for switching between light and dark themes",
   "type": "module",
   "files": [
     "dist"
@@ -17,7 +17,11 @@
   "author": "Andy Wardley",
   "licence": "ISC",
   "keywords": [
-    "react"
+    "react",
+    "theme",
+    "switch",
+    "light",
+    "dark"
   ],
   "scripts": {
     "dev": "vite",
@@ -27,6 +31,7 @@
     "preview": "vite preview --outDir docs --config vite.docs.js",
     "lint": "eslint 'src/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"
   },
+  "homepage": "https://abw.github.io/react-night-and-day/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abw/react-night-and-day.git"
