@@ -1,0 +1,17 @@
+#page {
+  /* default properties */
+  --brand-hue: 30;
+  --body-text: hsl(var(--brand-hue), 90%, 10%);
+  --body-back: hsl(var(--brand-hue), 20%, 85%);
+}
+#page.dark {
+  /* change properties for dark mode */
+  color-scheme: dark;
+  --body-back: hsl(var(--brand-hue), 20%, 10%);
+  --body-text: hsl(var(--brand-hue), 90%, 10%);
+}
+div, p, .your-other-rules {
+  /* implement styling using the properties */
+  color: var(--body-text);
+  background-color: var(--body-back);
+}

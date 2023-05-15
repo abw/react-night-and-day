@@ -1,0 +1,354 @@
+@import "config/all.scss";
+@import "components/all.scss";
+
+#page {
+  --brand-hue:            #{$brand-hue};
+  --body-back:            hsl(var(--brand-hue), 20%, 85%);
+  --body-text:            hsl(var(--brand-hue), 90%, 10%);
+  --panel-border:         hsl(var(--brand-hue), 25%, 85%);
+  --side-text:            hsl(var(--brand-hue), 50%, 10%);
+  --side-back:            hsl(var(--brand-hue), 20%, 90%);
+  --menu-text:            hsl(var(--brand-hue), 40%, 50%);
+  --menu-back:            hsl(var(--brand-hue), 20%, 95%);
+  --menu-hover-text:      hsl(var(--brand-hue), 50%, 45%);
+  --menu-hover-back:      hsl(var(--brand-hue), 20%, 98%);
+  --menu-active-text:     hsl(var(--brand-hue), 50%, 40%);
+  --menu-active-back:     hsl(var(--brand-hue), 20%, 99%);
+  --main-text:            hsl(var(--brand-hue), 90%, 10%);
+  --main-back:            hsl(var(--brand-hue), 20%, 97%);
+  --footer-text:          hsl(var(--brand-hue), 40%, 35%);
+  --footer-hover-text:    hsl(var(--brand-hue), 60%, 25%);
+  --link-text:            hsl(var(--brand-hue), 60%, 50%);
+  --link-hover-text:      hsl(var(--brand-hue), 60%, 40%);
+  --demo-border:          hsl(var(--brand-hue), 25%, 80%);
+  --demo-back:            hsl(var(--brand-hue), 25%, 99%);
+  --button-back:          hsl(var(--brand-hue), 50%, 50%);
+  --button-hover-back:    hsl(var(--brand-hue), 50%, 45%);
+  --logo-back:            hsl(var(--brand-hue),  5%, 97%);
+  --output-text:          hsl(var(--brand-hue), 10%, 90%);
+  --output-back:          hsl(var(--brand-hue), 25%, 25%);
+  --code-text:            hsl(var(--brand-hue), 90%, 30%);
+  --code-back:            hsl(var(--brand-hue), 30%, 95%);
+  --code-hover:           hsl(var(--brand-hue), 30%, 90%);
+  --code-border:          hsl(var(--brand-hue), 40%, 90%);
+  --shadow-1:             2px 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-2:             4px 4px 8px rgba(0, 0, 0, 0.06);
+}
+#page {
+  color-scheme: light dark;
+}
+#page.light {
+  color-scheme: light;
+}
+#page.red {
+  --brand-hue:            #{$red-hue};
+}
+#page.orange {
+  --brand-hue:            #{$orange-hue};
+}
+#page.yellow {
+  --brand-hue:            #{$yellow-hue};
+}
+#page.green {
+  --brand-hue:            #{$green-hue};
+}
+#page.blue {
+  --brand-hue:            #{$blue-hue};
+}
+#page.indigo {
+  --brand-hue:            #{$indigo-hue};
+}
+#page.violet {
+  --brand-hue:            #{$violet-hue};
+}
+#page.dark {
+  color-scheme: dark;
+  --body-back:            hsl(var(--brand-hue), 20%, 10%);
+  --body-text:            hsl(var(--brand-hue), 90%, 10%);
+  --panel-border:         hsl(var(--brand-hue), 25%, 20%);
+  --side-text:            hsl(var(--brand-hue), 20%, 85%);
+  --side-back:            hsl(var(--brand-hue), 20%, 15%);
+  --menu-text:            hsl(var(--brand-hue), 20%, 60%);
+  --menu-back:            hsl(var(--brand-hue), 20%, 25%);
+  --menu-hover-text:      hsl(var(--brand-hue), 30%, 70%);
+  --menu-hover-back:      hsl(var(--brand-hue), 20%, 30%);
+  --menu-active-text:     hsl(var(--brand-hue), 50%, 80%);
+  --menu-active-back:     hsl(var(--brand-hue), 20%, 35%);
+  --main-text:            hsl(var(--brand-hue), 50%, 90%);
+  --main-back:            hsl(var(--brand-hue), 20%, 20%);
+  --footer-text:          hsl(var(--brand-hue), 45%, 70%);
+  --footer-hover-text:    hsl(var(--brand-hue), 60%, 80%);
+
+  --link-text:            hsl(var(--brand-hue), 60%, 60%);
+  --link-hover-text:      hsl(var(--brand-hue), 60%, 70%);
+  --demo-border:          hsl(var(--brand-hue), 25%, 15%);
+  --demo-back:            hsl(var(--brand-hue), 20%, 30%);
+  --button-back:          hsl(var(--brand-hue), 50%, 50%);
+  --button-hover-back:    hsl(var(--brand-hue), 50%, 45%);
+  --logo-back:            hsl(var(--brand-hue), 30%, 80%);
+  --output-text:          hsl(var(--brand-hue), 10%, 90%);
+  --output-back:          hsl(var(--brand-hue), 15%, 30%);
+  --code-text:            hsl(var(--brand-hue), 40%, 80%);
+  --code-back:            hsl(var(--brand-hue), 30%, 25%);
+  --code-hover:           hsl(var(--brand-hue), 30%, 30%);
+  --code-border:          hsl(var(--brand-hue), 30%, 35%);
+  --shadow-1:             2px 2px 4px rgba(0, 0, 0, 0.16);
+  --shadow-2:             4px 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+html {
+  font-family: $font-sans;
+}
+body {
+  // background-color: mix($brand-color, $white, 15%)
+  // color: var(--body-text);
+  // background-color: var(--body-back);
+}
+#page {
+  color: var(--body-text);
+  background-color: var(--body-back);
+}
+#layout {
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  aside {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    padding: 1rem;
+    border: 1px solid var(--panel-border);
+    color: var(--side-text);
+    background-color: var(--side-back);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 2rem);
+    overflow-y: scroll;
+    footer {
+      margin-top: auto;
+      font-size: 0.8rem;
+      color: var(--footer-text);
+      .notes {
+        font-size: 0.8rem;
+        color: var(--footer-text);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      a {
+        font-size: 0;
+        width: 6rem;
+        color: var(--footer-text);
+        &:hover {
+          color: var(--footer-hover-text);
+        }
+        svg {
+          height: 2rem;
+        }
+      }
+
+    }
+    h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    ul.menu {
+      padding: 0;
+      margin: 0 0 2rem 0;
+      list-style: none;
+      li {
+        margin: 0;
+        padding: 0;
+        a {
+          display: block;
+          color: var(--menu-text);
+          background-color: var(--menu-back);
+          padding: 0.25rem 0.5rem;
+          margin-bottom: 0.25rem;
+          &:hover {
+            color: var(--menu-hover-text);
+            background-color: var(--menu-hover-back);
+          }
+          &.active {
+            color: var(--menu-active-text);
+            background-color: var(--menu-active-back);
+          }
+        }
+      }
+    }
+  }
+  main {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 2rem;
+    // padding-bottom: 200px;
+    color: var(--main-text);
+    background-color: var(--main-back);
+    border: 1px solid var(--panel-border);
+    max-height: calc(100vh - 2rem);
+    overflow-y: scroll;
+    h1:first-child {
+      line-height: 1;
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+.pic-side {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  div.logo {
+    color: var(--logo-back);
+    margin-top: 1rem;
+  }
+  & > div.blurb {
+    padding-right: 2rem;
+  }
+}
+.badger {
+  margin-top: 2rem;
+  width: 100%;
+  padding-top: 2rem;
+  text-align: center;
+  svg {
+    color: var(--logo-back);
+    width: 80px;
+  }
+  .caption {
+    padding: 0.5rem 0 0 0;
+    color: var(--footer-text);
+    font-size: 0.8rem;
+  }
+}
+code:not(.codeblock code) {
+  color: var(--code-text);
+  background-color: var(--code-back);
+  border: 1px solid var(--code-border);
+  padding: 0 0.25em;
+  border-radius: 2px;
+}
+a code:not(.codeblock code) {
+  // background-color: transparent;
+  // border: none;
+  color: var(--link-text);
+}
+a:hover code:not(.codeblock code) {
+  color: var(--link-hover);
+  // background-color: var(--code-hover);
+}
+img.logo {
+  width: 200px;
+}
+div.example {
+  h4 {
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: right;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+  .explanation {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .code, .output {
+    box-shadow: var(--shadow-1), var(--shadow-2);
+  }
+  .code {
+    position: relative;
+  }
+  .output {
+    margin-top: 1rem;
+    position: relative;
+    color: var(--output-text);
+    background-color: var(--output-back);
+    // color: hsl($brand-hue, 10%, 90%);
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+  }
+}
+a.read-on {
+  display: block;
+  text-align: right;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+a.github {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+button {
+  background-color: var(--button-back);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  & + button {
+    margin-left: 0.5rem;
+  }
+  &:hover {
+    background-color: var(--button-hover-back);
+  }
+  &.brown {
+    background-color: hsl($brown-hue, 50%, 50%);
+    &:hover {
+      background-color: hsl($brown-hue, 50%, 45%);
+    }
+  }
+  &.red {
+    background-color: hsl($red-hue, 50%, 50%);
+    &:hover {
+      background-color: hsl($red-hue, 50%, 45%);
+    }
+  }
+  &.green {
+    background-color: hsl($green-hue, 50%, 50%);
+  }
+  &.blue {
+    background-color: hsl($blue-hue, 50%, 50%);
+    &:hover {
+      background-color: hsl($blue-hue, 50%, 45%);
+    }
+  }
+  &.indigo {
+    background-color: hsl($indigo-hue, 50%, 50%);
+    &:hover {
+      background-color: hsl($indigo-hue, 50%, 45%);
+    }
+  }
+  &.violet {
+    background-color: hsl($violet-hue, 50%, 50%);
+    &:hover {
+      background-color: hsl($violet-hue, 50%, 45%);
+    }
+  }
+}
+.demo {
+  background-color: var(--demo-back);
+  border: 1px solid var(--demo-border);
+  border-radius: 0.5rem;
+  padding: 2rem 2rem;
+  box-shadow: var(--shadow-1), var(--shadow-2);
+  margin: 1rem 0 2rem 0;
+  p {
+    font-size: 1.2rem;
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+}
+div.buttons {
+  margin-bottom: 0.5rem;
+}
