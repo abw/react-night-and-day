@@ -57,7 +57,7 @@ ReactDOM
 
 ## useTheme()
 
-Call `useTheme()` to access the theme state and function to change the theme.
+Call `useTheme()` to access the theme state and functions to change the theme.
 
 ```jsx
 import React from 'react'
