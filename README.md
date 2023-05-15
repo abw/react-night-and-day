@@ -1,7 +1,22 @@
 # react-night-and-day
 
-This is the README for react-night-and-day.  It was created using
-[badger-scaffold-js](https://github.com/abw/badger-scaffold-js).
+This is a simple React library for switching between light and dark themes.
+
+It respects the user preference set in their browser, detects
+changes to that preference, and allows the theme to be toggled
+manually.
+
+As well as toggling between `light` and `dark` themes it allows you to define
+your own theme variants.
+
+It also supports an option to store the user's selected theme (and any
+variant) in local storage so the site "remembers" their preferences for the
+next time they visit.
+
+## Documentation and Demos
+
+See the [documentation site](https://abw.github.io/react-night-and-day/)
+for a demo and detailed documentation.
 
 ## Getting Started
 
@@ -19,10 +34,60 @@ $ yarn add @abw/react-night-and-day
 $ pnpm add @abw/react-night-and-day
 ```
 
-You can then import the modules and start using them.
+## ThemeProvider
+
+Add the `ThemeProvider` around your application code.
 
 ```jsx
-import { Hello } from '@abw/react-night-and-day'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import YourAppCode from './YourAppCode.jsx'
+import { ThemeProvider } from '@abw/react-night-and-day'
+
+ReactDOM
+  .createRoot( document.getElementById('root') )
+  .render(
+    <React.StrictMode>
+      <ThemeProvider>   {/* add this */}
+        <YourAppCode/>
+      </ThemeProvider>  {/* and this */}
+    </React.StrictMode>,
+  )
+```
+
+## useTheme()
+
+Call `useTheme()` to access the theme state and function to change the theme.
+
+```jsx
+import React from 'react'
+import { useTheme } from '@abw/react-night-and-day'
+
+const UseThemeExample = () => {
+  const {
+    theme,        // 'light' or 'dark'
+    isDark,       // true if dark theme selected
+    isLight,      // true if light theme selected
+    setDark,      // set theme to 'dark'
+    setLight,     // set theme to 'light'
+    toggleTheme,  // toggle theme between 'light' and 'dark'
+  } = useTheme()
+
+  return (
+    <>
+      <p>
+        The theme is currently {theme}.<br/>
+        It {isLight ? 'is' : 'is not'} light.<br/>
+        It {isDark  ? 'is' : 'is not'} dark.<br/>
+      </p>
+      <button onClick={setLight}>Set Light</button>
+      <button onClick={setDark}>Set Dark</button>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+    </>
+  )
+}
+
+export default UseThemeExample
 ```
 
 ## Notes for Maintainers
@@ -103,3 +168,7 @@ The `test` directory contains test scripts which will be run by
 Any files in `test/lib` are assumed to be components used by tests and
 are not test scripts in their own right.  They are ignored by the test
 runner.
+
+## Author
+
+Andy Wardley
