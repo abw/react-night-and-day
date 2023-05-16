@@ -31,7 +31,7 @@ const Demo = () => {
       <p>
         The variant is {variant || 'not defined'}.<br/>
       </p>
-      <div>
+      <div className="buttons">
         <button onClick={() => setVariant('brown')} className="brown">Brown Variant</button>
         <button onClick={() => setVariant('red')} className="red">Red Variant</button>
         <button onClick={() => setVariant('blue')} className="blue">Blue Variant</button>
