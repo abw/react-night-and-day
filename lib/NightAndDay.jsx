@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { Generator } from '@abw/react-context'
+import React, { useState, useEffect, createContext, useContext } from 'react'
 
 const DARK         = 'dark'
 const LIGHT        = 'light'
@@ -9,8 +8,9 @@ const getTheme     = () => window?.matchMedia?.(PREFERS_DARK).matches
 const Storage      = window?.localStorage
 const splitTheme   = saved => saved.split(' ')
 const joinTheme    = (theme, variant='') => `${theme} ${variant}`
+const Context      = createContext()
 
-const NightAndDay = ({storageKey, defaultVariant, render}) => {
+const NightAndDay = ({storageKey, defaultVariant}) => {
   const saved = storageKey
     ? Storage?.getItem(storageKey)
     : null
@@ -52,17 +52,21 @@ const NightAndDay = ({storageKey, defaultVariant, render}) => {
   const setLight    = () => saveDark(false)
   const setDark     = () => saveDark(true)
 
-  return render({
+  return {
     isDark,
     isLight: ! isDark,
     setDark, setLight, setIsDark,
     toggleTheme,
     theme: isDark ? DARK : LIGHT,
     variant, setVariant
-  })
+  }
 }
 
-const generated = Generator(NightAndDay)
-export const { Provider: ThemeProvider, Use: useTheme } = generated
-export default generated
+export const ThemeProvider = ({children, ...props}) =>
+  <Context.Provider value={NightAndDay(props)}>
+    {children}
+  </Context.Provider>
 
+export const useTheme = () => useContext(Context)
+
+export default NightAndDay
