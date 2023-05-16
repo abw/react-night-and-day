@@ -21,6 +21,9 @@ const Variants = () => {
         <button onClick={() => setVariant('red')} className="red">
           Red Variant
         </button>
+        <button onClick={() => setVariant('green')} className="green">
+          Green Variant
+        </button>
         <button onClick={() => setVariant('blue')} className="blue">
           Blue Variant
         </button>
