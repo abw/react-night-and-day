@@ -1,5 +1,7 @@
+import { useTheme } from '../../lib/index.jsx'
+{/* START */}
 import React from 'react'
-import { useTheme } from '@abw/react-night-and-day'
+// PRETEND: import { useTheme } from '@abw/react-night-and-day'
 
 const UseThemeExample = () => {
   const {

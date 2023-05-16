@@ -1,0 +1,16 @@
+code:not(.codeblock code) {
+  color: var(--code-text);
+  background-color: var(--code-back);
+  border: 1px solid var(--code-border);
+  padding: 0 0.25em;
+  border-radius: 2px;
+}
+a code:not(.codeblock code) {
+  // background-color: transparent;
+  // border: none;
+  color: var(--link-text);
+}
+a:hover code:not(.codeblock code) {
+  color: var(--link-hover);
+  // background-color: var(--code-hover);
+}

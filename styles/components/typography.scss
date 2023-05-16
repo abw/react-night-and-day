@@ -40,7 +40,7 @@ ul.menu {
 li {
   margin-bottom: 1rem;
 }
-a {
+a, .link, .night-and-day--switcher {
   font-weight: 500;
   color: var(--link-text);
   text-decoration: inherit;

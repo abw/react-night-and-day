@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@abw/badger-timestamp': ^1.0.4
+  '@abw/badger-utils': ^1.0.19
   '@abw/react-context': ^2.0.3
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
@@ -28,6 +29,7 @@ dependencies:
 
 devDependencies:
   '@abw/badger-timestamp': 1.0.4
+  '@abw/badger-utils': 1.0.19
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 14.4.3_@testing-library+dom@9.3.0

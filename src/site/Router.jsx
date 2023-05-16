@@ -9,6 +9,7 @@ import UseTheme from '../pages/UseTheme.jsx'
 import StorageKey from '../pages/storageKey.jsx'
 import Variants from '../pages/Variants.jsx'
 import CSSProperties from '../pages/CSSProperties.jsx'
+import Icons from '../pages/Icons.jsx'
 
 export const Router = createBrowserRouter(
   [
@@ -24,6 +25,7 @@ export const Router = createBrowserRouter(
         { path: 'storage-key', element: <StorageKey/> },
         { path: 'variants', element: <Variants/> },
         { path: 'css-properties', element: <CSSProperties/> },
+        { path: 'icons', element: <Icons/> },
       ]
     },
   ],

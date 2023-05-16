@@ -11,7 +11,7 @@ const ThemeProvider = () =>
       and wrap your application code with it.  The theme will be
       accessible to any code contained within this element.
     </p>
-    <CodeBlock code={ProviderSrc} caption="Provider"/>
+    <CodeBlock code={ProviderSrc} caption="ThemeProvider" expand/>
   </div>
 
 export default ThemeProvider

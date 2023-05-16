@@ -1,5 +1,6 @@
 @import "config/all.scss";
 @import "components/all.scss";
+@import "/styles/night-and-day.css";
 
 #page {
   --brand-hue:            #{$brand-hue};
@@ -25,14 +26,17 @@
   --button-back:          hsl(var(--brand-hue), 50%, 50%);
   --button-hover-back:    hsl(var(--brand-hue), 50%, 45%);
   --logo-back:            hsl(var(--brand-hue),  5%, 97%);
-  --output-text:          hsl(var(--brand-hue), 10%, 90%);
-  --output-back:          hsl(var(--brand-hue), 25%, 25%);
   --code-text:            hsl(var(--brand-hue), 90%, 30%);
   --code-back:            hsl(var(--brand-hue), 30%, 95%);
   --code-hover:           hsl(var(--brand-hue), 30%, 90%);
   --code-border:          hsl(var(--brand-hue), 40%, 90%);
+  --output-text:          hsl(var(--brand-hue), 10%, 90%);
+  --output-back:          hsl(var(--brand-hue), 25%, 25%);
+  --output-border:        hsl(var(--brand-hue), 25%, 25%);
   --shadow-1:             2px 2px 4px rgba(0, 0, 0, 0.08);
   --shadow-2:             4px 4px 8px rgba(0, 0, 0, 0.06);
+  --codeblock-radius:     0.25em;
+  --codeblock-shadow:     var(--shadow-1), var(--shadow-2);
 }
 #page {
   color-scheme: light dark;
@@ -226,54 +230,8 @@ body {
     font-size: 0.8rem;
   }
 }
-code:not(.codeblock code) {
-  color: var(--code-text);
-  background-color: var(--code-back);
-  border: 1px solid var(--code-border);
-  padding: 0 0.25em;
-  border-radius: 2px;
-}
-a code:not(.codeblock code) {
-  // background-color: transparent;
-  // border: none;
-  color: var(--link-text);
-}
-a:hover code:not(.codeblock code) {
-  color: var(--link-hover);
-  // background-color: var(--code-hover);
-}
 img.logo {
   width: 200px;
-}
-div.example {
-  h4 {
-    font-size: 0.8rem;
-    margin: 0;
-    text-align: right;
-    color: white;
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-  }
-  .explanation {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  .code, .output {
-    box-shadow: var(--shadow-1), var(--shadow-2);
-  }
-  .code {
-    position: relative;
-  }
-  .output {
-    margin-top: 1rem;
-    position: relative;
-    color: var(--output-text);
-    background-color: var(--output-back);
-    // color: hsl($brand-hue, 10%, 90%);
-    padding: 1rem 2rem;
-    font-size: 1.2em;
-  }
 }
 a.read-on {
   display: block;

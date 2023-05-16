@@ -1,0 +1,106 @@
+div.codeblock,
+div.output {
+  position: relative;
+  font-size: 0.9rem;
+  border-radius: var(--codeblock-radius);
+  padding: 0;
+  margin: 1rem 0;
+  box-shadow: var(--codeblock-shadow);
+  h4.caption {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: normal;
+    top: 0.25rem;
+    right: 0.75rem;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+}
+
+div.codeblock {
+  font-size: 0.9rem;
+  padding: 0;
+  margin-bottom: 2rem;
+  box-shadow: var(--codeblock-shadow);
+  &.expandable {
+    background-color: rgba(43, 43, 43);
+  }
+  pre {
+    border-radius: var(--codeblock-radius);
+    margin: 0 !important;
+    max-height: 18rem;
+    overflow-y: scroll;
+    transition: all 0.5s;
+  }
+  h4.caption {
+    color: white;
+  }
+  div.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--codeblock-back);
+    background: linear-gradient(180deg, var(--codeblock-bg-from) 0%, var(--codeblock-bg-to) 100%);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border-radius: 0 0 var(--codeblock-radius) var(--codeblock-radius);
+  }
+  .expand, .clipboard {
+    font-size: 0.8rem;
+    color: white;
+    background-color: hsla(var(--brand-hue), 90%, 30%, 0.8);
+    padding: 0.25em 0.5em;
+    margin: 0;
+    min-width: 10ch;
+    text-align: center;
+    transition: all 1s;
+    user-select: none;
+    &:hover {
+      transition: all 0.2s;
+      background-color: hsla(var(--brand-hue), 50%, 50%, 0.9);
+      cursor: pointer;
+    }
+  }
+  .expand {
+    left: 0%;
+    border-radius: 0 var(--codeblock-radius) 0 var(--codeblock-radius);
+  }
+  .clipboard {
+    right: 0rem;
+    border-radius: var(--codeblock-radius) 0 var(--codeblock-radius) 0;
+    transition: all 1s;
+    &.copied {
+      background-color: hsla(120, 70%, 30%, 0.9);
+      cursor: pointer;
+    }
+  }
+  &.fixed {
+    .expand {
+      visibility: hidden;
+    }
+  }
+  &.expanded {
+    pre {
+      max-height: 250rem;
+      transition: all 0.5s;
+    }
+  }
+}
+div.output {
+  position: relative;
+  color: var(--output-text);
+  border: 1px solid var(--output-border);
+  background-color: var(--output-back);
+  box-shadow: var(--codeblock-shadow);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  h4.caption {
+    color: var(--output-text);
+  }
+  p:first-of-type {
+    margin-top: 0;
+  }
+}

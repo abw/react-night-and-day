@@ -1,0 +1,23 @@
+svg.night-and-day--icon {
+  overflow: visible;
+  box-sizing: content-box;
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
+.night-and-day--icon + .night-and-day--icon {
+  margin-left: 1rem;
+}
+.night-and-day--switcher {
+  text-align: center;
+  display: inline-block;
+}
+.night-and-day--switcher + .night-and-day--switcher {
+  margin-left: 1rem;
+}
+.night-and-day--switcher .night-and-day--caption {
+  font-size: 0.75em;
+  margin-top: -0.25em;
+  text-align: center;
+}

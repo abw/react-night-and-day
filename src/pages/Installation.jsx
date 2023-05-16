@@ -8,7 +8,7 @@ const Installation = () =>
       Add the <code className="code">@abw/react-night-and-day</code> module to
       your project using your favourite package manager.
     </p>
-    <CodeBlock language="bash">
+    <CodeBlock language="bash" expand>
       {`## using npm
 $ npm add @abw/react-night-and-day
 
@@ -16,8 +16,7 @@ $ npm add @abw/react-night-and-day
 $ yarn add @abw/react-night-and-day
 
 ## using pnpm
-$ pnpm add @abw/react-night-and-day
-`}
+$ pnpm add @abw/react-night-and-day`}
     </CodeBlock>
 
   </div>

@@ -1,10 +1,12 @@
-import React       from 'react'
-import VariantsSrc from '../examples/Variants.jsx?raw'
+import React             from 'react'
+import Variants          from '../examples/Variants.jsx'
+import VariantsSrc       from '../examples/Variants.jsx?raw'
 import DefaultVariantSrc from '../examples/DefaultVariant.jsx?raw'
-import CodeBlock from '../site/CodeBlock.jsx'
-import Link from '../site/Link.jsx'
+import CodeBlock         from '../site/CodeBlock.jsx'
+import Example           from '../site/Example.jsx'
+import Link              from '../site/Link.jsx'
 
-const Variants = () =>
+const VariantsPage = () =>
   <div>
     <h1><code>variant</code> and <code>setVariant()</code></h1>
     <p>
@@ -21,13 +23,21 @@ const Variants = () =>
       your variants, and how you adapt your UI to implement the different
       variants.
     </p>
-    <CodeBlock code={VariantsSrc} caption="variants"/>
+    <Example
+      Element={Variants}
+      code={VariantsSrc}
+      caption="variants"
+    />
     <p>
       You can pass the <code>defaultVariant</code> property to the{' '}
       <code>ThemeProvider</code> to set the default variant.  Otherwise it
       will be undefined until you first call <code>setVariant()</code>.
     </p>
-    <CodeBlock code={DefaultVariantSrc} caption="defaultVariant"/>
+    <CodeBlock
+      code={DefaultVariantSrc}
+      caption="defaultVariant"
+      expand
+    />
   </div>
 
-export default Variants
+export default VariantsPage

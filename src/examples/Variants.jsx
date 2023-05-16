@@ -1,5 +1,7 @@
+import { useTheme } from '../../lib/index.jsx'
+{/* START */}
 import React from 'react'
-import { useTheme } from '@abw/react-night-and-day'
+// PRETEND: import { useTheme } from '@abw/react-night-and-day'
 
 const Variants = () => {
   const {
@@ -10,11 +12,25 @@ const Variants = () => {
   return (
     <>
       <p>
-        The variant is currently {variant}.
+        The variant is {variant || 'not defined'}.<br/>
       </p>
-      <button onClick={() => setVariant('red')}>Red</button>
-      <button onClick={() => setVariant('green')}>Green</button>
-      <button onClick={() => setVariant('blue')}>Blue</button>
+      <div>
+        <button onClick={() => setVariant('brown')} className="brown">
+          Brown Variant
+        </button>
+        <button onClick={() => setVariant('red')} className="red">
+          Red Variant
+        </button>
+        <button onClick={() => setVariant('blue')} className="blue">
+          Blue Variant
+        </button>
+        <button onClick={() => setVariant('indigo')} className="indigo">
+          Indigo Variant
+        </button>
+        <button onClick={() => setVariant('violet')} className="violet">
+          Violet Variant
+        </button>
+      </div>
     </>
   )
 }

@@ -18,7 +18,11 @@ const StorageKey = () =>
       makes sense to call it something related to the theme for the sake of
       transparency.
     </p>
-    <CodeBlock code={StorageKeySrc} caption="storageKey"/>
+    <CodeBlock
+      code={StorageKeySrc}
+      caption="storageKey"
+      expand
+    />
   </div>
 
 export default StorageKey

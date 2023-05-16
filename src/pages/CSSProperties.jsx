@@ -13,13 +13,23 @@ const CSSProperties = () =>
       site that reflects the current theme. For example, if your site has a
       main page layout component you can set it up something like this.
     </p>
-    <CodeBlock code={PageLayout} caption="Page Layout"/>
+    <CodeBlock
+      code={PageLayout}
+      caption="Page Layout"
+      expand
+    />
+
     <p>
       Then your CSS stylesheet might look something like this.
       Define the default properties for the light theme and provide
       alternatives to them for when the dark theme is selected.
     </p>
-    <CodeBlock code={CSSProps} caption="CSS Properties" language="css"/>
+    <CodeBlock
+      code={CSSProps}
+      caption="CSS Properties"
+      language="css"
+      expand
+    />
   </div>
 
 export default CSSProperties

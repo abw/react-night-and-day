@@ -1,0 +1,7 @@
+export const NIGHT_AND_DAY  = 'night-and-day'
+export const SWITCHER       = 'night-and-day--switcher'
+export const CAPTION        = 'night-and-day--caption'
+export const ICON           = 'night-and-day--icon'
+export const LIGHT          = 'Light'
+export const DARK           = 'Dark'
+export const CURRENT_COLOR  = 'currentColor'

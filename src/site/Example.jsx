@@ -1,27 +1,19 @@
 import React from 'react'
 import CodeBlock from './CodeBlock.jsx'
 
-export const Example = ({Element, code, children='', className=''}) => {
-  const core = code
-    .replace(/^[^]*?{?\/\*\s*START\s*\*\/}?\n/, '')  // remove everything up to {/* START */}
-    .replace(/[\n\s]*{?\/\*\s*END\s*\*\/}?[^]*/, '') // and everything from {/* END */} onwards
-    .replaceAll(/^\/\/\s*PRETEND:\s*/mg, '')         // and the // PRETEND: prefix
-
+export const Example = ({
+  Element, code, children='', className='', caption, fixed, expand
+}) => {
   return <div className={`example ${className}`}>
-    { children
-      ? <div className="explanation">
-          {children}
-        </div>
-      : null
-    }
-    <div className="mar-t-4 code">
-      <h4>Code</h4>
-      <CodeBlock>{core}</CodeBlock>
-    </div>
+    <CodeBlock
+      caption={caption} code={prepareCode(code)}
+      expand={expand} fixed={fixed}
+    />
+    { children }
     { Element
       ? <>
-          <div className="mar-t-4 output">
-            <h4>Output</h4>
+          <div className="output">
+            <h4 className="caption">Output</h4>
             <Element/>
           </div>
         </>
@@ -29,5 +21,13 @@ export const Example = ({Element, code, children='', className=''}) => {
     }
   </div>
 }
+
+export const prepareCode = code =>
+  code
+    .replace(/^[^]*?{?\/\*\s*START\s*\*\/}?\n/, '')  // remove everything up to {/* START */}
+    .replace(/[\n\s]*{?\/\*\s*END\s*\*\/}?[^]*/, '') // and everything from {/* END */} onwards
+    .replaceAll(/\/\/\s*PRETEND:\s/g, '')           // and the // PRETEND: prefix
+
+
 
 export default Example

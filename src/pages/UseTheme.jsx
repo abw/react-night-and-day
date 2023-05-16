@@ -1,8 +1,9 @@
 import React       from 'react'
+import UseTheme    from '../examples/UseTheme.jsx'
 import UseThemeSrc from '../examples/UseTheme.jsx?raw'
-import CodeBlock from '../site/CodeBlock.jsx'
+import Example     from '../site/Example.jsx'
 
-const UseTheme = () =>
+const UseThemePage = () =>
   <div>
     <h1><code>useTheme()</code></h1>
     <p>
@@ -12,7 +13,10 @@ const UseTheme = () =>
       theme and a number of functions to set the theme.
     </p>
 
-    <CodeBlock code={UseThemeSrc} caption="useTheme"/>
+    <Example
+      Element={UseTheme} code={UseThemeSrc}
+      caption="useTheme()" expand
+    />
   </div>
 
-export default UseTheme
+export default UseThemePage
