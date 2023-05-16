@@ -36,13 +36,14 @@ const Home = () =>
       <Demo/>
     </div>
     <h2>Documentation</h2>
-    <ul className="large menu">
+    <ul className="largish menu">
       <li><Link to="installation" text="Installation"/> - adding the code to your project</li>
       <li><Link to="theme-provider"><code>ThemeProvider</code></Link> - wrap this around your app</li>
       <li><Link to="use-theme"><code>useTheme()</code></Link> - access the themey goodness</li>
       <li><Link to="variants"><code>variant</code> and <code>setVariant</code></Link> - define variations on a theme</li>
       <li><Link to="storage-key"><code>storageKey</code></Link> - save theme selection in local storage</li>
       <li><Link to="css-properties">CSS Custom Properties</Link> - how to change styling based on the theme</li>
+      <li><Link to="icons">Icons</Link> - icons to display and toggle theme</li>
     </ul>
     <div className="badger">
       <Badger/>

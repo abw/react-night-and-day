@@ -5,11 +5,7 @@
 html {
   font-family: $font-sans;
 }
-body {
-  // background-color: mix($brand-color, $white, 15%)
-  // color: var(--body-text);
-  // background-color: var(--body-back);
-}
+
 #page {
   color: var(--body-text);
   background-color: var(--body-back);
