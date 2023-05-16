@@ -1,3 +1,5 @@
+// NOTE: these aren't really used much any more.  They may still be referenced
+// in the demo?
 $red-hue:     0   !default;
 $brown-hue:   20  !default;
 $orange-hue:  30  !default;
@@ -36,3 +38,11 @@ $brand-darker:    darken($brand-color, 30%) !default;
 $brand-lightish:  lighten($brand-color, 10%) !default;
 $brand-light:     lighten($brand-color, 20%) !default;
 $brand-lighter:   lighten($brand-color, 30%) !default;
+
+// These are used by the examples / codeblock
+$codeblock-back-light:  #281300;
+$codeblock-back-dark:     #180B00;
+$codeblock-light-from:    rgba($codeblock-back-light, 0);
+$codeblock-light-to:      rgba($codeblock-back-light, 1);
+$codeblock-dark-from:     rgba($codeblock-back-dark, 0);
+$codeblock-dark-to:       rgba($codeblock-back-dark, 1);

@@ -1,10 +1,5 @@
 # TODO
 
-* Icon
-* Sun
-* Moon
-* Sunrise
-* Nightfall
 * ThemeIcon
 * IconSelect
 * CSS / SCSS in public or bundled
