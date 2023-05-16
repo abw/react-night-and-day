@@ -93,11 +93,13 @@
 .pic-side {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 2rem;
+  align-items: start;
   div.logo {
     color: var(--logo-back);
     margin-top: 1rem;
+    width: 100%;
   }
   & > div.blurb {
     padding-right: 2rem;

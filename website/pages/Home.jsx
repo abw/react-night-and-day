@@ -2,13 +2,14 @@ import React      from 'react'
 import Link       from '../site/Link.jsx'
 import Demo       from '../examples/Demo.jsx'
 import { ReactComponent as Badger } from '../svg/badger.svg'
+import { ReactComponent as NightAndDay } from '../svg/night-and-day.svg'
 
 const Home = () =>
   <div className="">
     <h1>@abw/react-night-and-day</h1>
     <div className="pic-side">
       <div className="logo">
-        <Badger/>
+        <NightAndDay/>
       </div>
       <div className="blurb">
         <p className="intro">
