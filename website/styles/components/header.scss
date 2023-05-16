@@ -1,0 +1,82 @@
+header.site {
+  color: var(--header-text);
+  background-color: var(--header-back);
+  box-shadow: 0 2px 4px var(--header-shadow);
+  a, .link, .night-and-day--switcher {
+    color: var(--header-text);
+    &:hover {
+      color: var(--header-hover);
+    }
+  }
+  .container {
+    height: $header-height;
+    min-width: $container-min;
+    max-width: $container-max;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $layout-gap;
+  }
+  .night-and-day--switcher {
+    font-size: 1.2rem;
+  }
+  .github svg {
+    font-size: 1.2em;
+    height: 1.2em;
+    overflow: visible;
+    vertical-align: -.2em;
+    margin-left: 1rem;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+  .palette {
+    background-color: var(--palette-back);
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 0;
+    padding: 0.25rem;
+    border-radius: 1rem;
+    div {
+      display: inline-block;
+      width: 2rem;
+      height: 1rem;
+      border-radius: 0.5rem;
+      border: 0.25rem solid var(--palette-back);
+      background-color: blue;
+      & + div {
+        margin-left: 0.5rem;
+      }
+      &.brown {
+        --swatch-hue: var(--brown-hue);
+      }
+      &.red {
+        --swatch-hue: var(--red-hue);
+      }
+      &.orange {
+        --swatch-hue: var(--orange-hue);
+      }
+      &.green {
+        --swatch-hue: var(--green-hue);
+      }
+      &.blue {
+        --swatch-hue: var(--blue-hue);
+      }
+      &.indigo {
+        --swatch-hue: var(--indigo-hue);
+      }
+      &.violet {
+        --swatch-hue: var(--violet-hue);
+      }
+      background-color: hsl(var(--swatch-hue), 65%, 50%);
+      &:hover {
+        border-color: hsl(var(--swatch-hue), 65%, var(--swatch-hover-light));
+      }
+      &.selected {
+        border-color: hsl(var(--swatch-hue), 65%, var(--swatch-select-light));
+      }
+    }
+  }
+}

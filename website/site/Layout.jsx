@@ -3,12 +3,14 @@ import Sidebar from './Sidebar.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
 import { Outlet } from 'react-router-dom'
 import { useTheme } from '../../lib/NightAndDay.jsx'
+import Header from './Header.jsx'
 
 const Layout = () => {
   const { theme, variant } = useTheme()
 
   return (
     <div id="page" className={`${theme} ${variant||''}`}>
+      <Header/>
       <div id="layout" className={theme}>
         <ScrollToTop/>
         <aside id="sidebar">

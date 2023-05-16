@@ -1,5 +1,19 @@
 #page {
   --brand-hue:            #{$brand-hue};
+  --red-hue:              0;
+  --brown-hue:            20;
+  --green-hue:            90;
+  --blue-hue:             200;
+  --indigo-hue:           240;
+  --violet-hue:           275;
+  --header-back:          hsl(var(--brand-hue), 30%, 70%);
+  --header-text:          hsl(var(--brand-hue), 60%, 30%);
+  --header-hover:         hsl(var(--brand-hue), 70%, 15%);
+  --palette-back:         hsl(var(--brand-hue), 25%, 80%);
+  --swatch-hover-light:   75%;
+  --swatch-select-light:  70%;
+  --panel-shadow:       rgba(0, 0, 0, 0.05);
+  --header-shadow:      var(--panel-shadow);
   --body-back:            hsl(var(--brand-hue), 20%, 85%);
   --body-text:            hsl(var(--brand-hue), 90%, 10%);
   --panel-border:         hsl(var(--brand-hue), 25%, 85%);
@@ -43,28 +57,28 @@
   color-scheme: light;
 }
 #page.red {
-  --brand-hue:            #{$red-hue};
-}
-#page.orange {
-  --brand-hue:            #{$orange-hue};
-}
-#page.yellow {
-  --brand-hue:            #{$yellow-hue};
+  --brand-hue:            var(--red-hue);
 }
 #page.green {
-  --brand-hue:            #{$green-hue};
+  --brand-hue:            var(--green-hue);
 }
 #page.blue {
-  --brand-hue:            #{$blue-hue};
+  --brand-hue:            var(--blue-hue);
 }
 #page.indigo {
-  --brand-hue:            #{$indigo-hue};
+  --brand-hue:            var(--indigo-hue);
 }
 #page.violet {
-  --brand-hue:            #{$violet-hue};
+  --brand-hue:            var(--violet-hue);
 }
 #page.dark {
   color-scheme: dark;
+  --header-back:          hsl(var(--brand-hue), 30%, 30%);
+  --header-text:          hsl(var(--brand-hue), 30%, 70%);
+  --header-hover:         hsl(var(--brand-hue), 70%, 80%);
+  --palette-back:         hsl(var(--brand-hue), 85%, 15%);
+  --swatch-hover-light:   65%;
+  --swatch-select-light:  65%;
   --body-back:            hsl(var(--brand-hue), 20%, 10%);
   --body-text:            hsl(var(--brand-hue), 90%, 10%);
   --panel-border:         hsl(var(--brand-hue), 25%, 20%);

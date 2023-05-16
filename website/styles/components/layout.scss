@@ -1,12 +1,12 @@
 #layout {
-  min-width: 320px;
-  max-width: 1280px;
+  min-width: $container-min;
+  max-width: $container-max;
   margin: 0 auto;
   padding: 1rem;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: $layout-gap;
   aside {
     flex-basis: 20rem;
     flex-grow: 1;
@@ -16,8 +16,9 @@
     background-color: var(--side-back);
     display: flex;
     flex-direction: column;
-    max-height: calc(100vh - 2rem);
+    max-height: $main-height;
     overflow-y: scroll;
+    box-shadow: 2px 2px 4px var(--panel-shadow);
     footer {
       margin-top: auto;
       font-size: 0.8rem;
@@ -80,8 +81,9 @@
     color: var(--main-text);
     background-color: var(--main-back);
     border: 1px solid var(--panel-border);
-    max-height: calc(100vh - 2rem);
+    max-height: $main-height;
     overflow-y: scroll;
+    box-shadow: 2px 2px 4px var(--panel-shadow);
     h1:first-child {
       line-height: 1;
       margin: 0 0 0.5em 0;

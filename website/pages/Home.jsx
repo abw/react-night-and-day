@@ -2,14 +2,10 @@ import React      from 'react'
 import Link       from '../site/Link.jsx'
 import Demo       from '../examples/Demo.jsx'
 import { ReactComponent as Badger } from '../svg/badger.svg'
-import { ReactComponent as Github } from '../svg/github.svg'
 
 const Home = () =>
   <div className="">
     <h1>@abw/react-night-and-day</h1>
-    <a href="https://github.com/abw/react-night-and-day" className="github">
-      <Github/>
-    </a>
     <div className="pic-side">
       <div className="logo">
         <Badger/>

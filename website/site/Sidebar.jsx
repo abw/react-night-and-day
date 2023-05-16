@@ -6,9 +6,9 @@ import { ReactComponent as Abw } from '../svg/abw.svg'
 const Sidebar = () =>
   <>
     <div className="menu">
-      <h4>@abw/react-night-and-day</h4>
+      {/* <h4>@abw/react-night-and-day</h4> */}
       <ul className="menu">
-        <li><Link to="/" end text="Home"/></li>
+        {/* <li><Link to="/" end text="Home"/></li> */}
         {/* <li><Link to="getting-started" end text="Getting Started"/></li> */}
         <li><Link to="installation" end text="Installation"/></li>
         <li><Link to="theme-provider">ThemeProvider</Link></li>
