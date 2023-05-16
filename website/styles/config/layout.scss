@@ -1,5 +1,7 @@
-$header-height: 2.5rem;
-$layout-gap:    1rem;
-$main-height:   calc(100vh - $header-height - (2 * $layout-gap));
-$container-min: 320px;
-$container-max: 1280px;
+$header-height:       2.5rem;
+$layout-gap:          1rem;
+$main-height:         calc(100vh - $header-height - (2 * $layout-gap));
+$container-min:       480px;
+$container-max:       1280px;
+$mobile-menu-height:  10rem;
+$mobile-main-height:  calc(100vh - $header-height - $mobile-menu-height - (3 * $layout-gap));

@@ -31,6 +31,8 @@ div.codeblock {
     margin: 0 !important;
     max-height: 18rem;
     overflow-y: scroll;
+    overflow-x: scroll;
+    max-width: 100%;
     transition: all 0.5s;
   }
   h4.caption {
@@ -103,4 +105,7 @@ div.output {
   p:first-of-type {
     margin-top: 0;
   }
+}
+div.example:last-child .output {
+  margin-bottom: 0;
 }

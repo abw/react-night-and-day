@@ -44,9 +44,12 @@ export const CodeBlock = ({
       </div>
       <SyntaxHighlighter
         language={language} style={darcula} showLineNumbers={true}
+        // wrapLongLines
         customStyle={{
           paddingBottom: fixed ? '1rem' : '2rem',
-          backgroundColor: isDark ? '#180B00' : '#281300'
+          backgroundColor: isDark ? '#180B00' : '#281300',
+          maxWidth: '100%'
+
         }}
       >
         {code||children}

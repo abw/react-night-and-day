@@ -1,0 +1,42 @@
+
+@media (max-width: 1024px) {
+  #layout aside {
+    flex-basis: 12rem;
+    ul.menu {
+      font-size: $size-smallish;
+    }
+    footer .notes {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+        text-align: center;
+      }
+      a {
+        order: 3;
+        flex-basis: 100%;
+        margin: 1rem 0 0.5rem 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #layout {
+    flex-direction: column;
+    aside {
+      flex-basis: $mobile-menu-height;
+      flex-grow: 0;
+    }
+    main {
+      max-height: $mobile-main-height;
+      padding: 1rem;
+    }
+  }
+  header.site div.palette div {
+    width: 1rem;
+  }
+  div.codeblock,
+  div.output {
+    font-size: 0.8rem;
+  }
+}

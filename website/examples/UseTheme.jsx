@@ -10,7 +10,7 @@ const UseThemeExample = () => {
     isLight,      // true if light theme selected
     setDark,      // set theme to 'dark'
     setLight,     // set theme to 'light'
-    toggleTheme,  // toggle theme between 'light' and 'dark'
+    toggleTheme,  // toggle theme 'light' <-> 'dark'
   } = useTheme()
 
   return (
@@ -20,9 +20,17 @@ const UseThemeExample = () => {
         It {isLight ? 'is' : 'is not'} light.<br/>
         It {isDark  ? 'is' : 'is not'} dark.<br/>
       </p>
-      <button onClick={setLight}>Set Light</button>
-      <button onClick={setDark}>Set Dark</button>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+      <div className="buttons">
+        <button onClick={setLight}>
+          Set Light
+        </button>
+        <button onClick={setDark}>
+          Set Dark
+        </button>
+        <button onClick={toggleTheme}>
+          Toggle Theme
+        </button>
+      </div>
     </>
   )
 }

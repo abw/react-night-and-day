@@ -4,37 +4,33 @@ import React from 'react'
 // PRETEND: import { useTheme } from '@abw/react-night-and-day'
 
 const Variants = () => {
-  const {
-    variant,      // anything you like
-    setVariant,   // set the variant
-  } = useTheme()
-
+  const { variant } = useTheme()
   return (
     <>
       <p>
-        The variant is {variant || 'not defined'}.<br/>
+        The variant is {variant || 'not defined'}.
       </p>
-      <div>
-        <button onClick={() => setVariant('brown')} className="brown">
-          Brown Variant
-        </button>
-        <button onClick={() => setVariant('red')} className="red">
-          Red Variant
-        </button>
-        <button onClick={() => setVariant('green')} className="green">
-          Green Variant
-        </button>
-        <button onClick={() => setVariant('blue')} className="blue">
-          Blue Variant
-        </button>
-        <button onClick={() => setVariant('indigo')} className="indigo">
-          Indigo Variant
-        </button>
-        <button onClick={() => setVariant('violet')} className="violet">
-          Violet Variant
-        </button>
+      <div className="buttons">
+        <Button color="brown"/>
+        <Button color="red"/>
+        <Button color="green"/>
+        <Button color="blue"/>
+        <Button color="indigo"/>
+        <Button color="violet"/>
       </div>
     </>
+  )
+}
+
+const Button = ({color}) => {
+  const { setVariant } = useTheme()
+  return (
+    <button
+      onClick={() => setVariant(color)}
+      className={color}
+    >
+      {color}
+    </button>
   )
 }
 

@@ -5,8 +5,14 @@ import React from 'react'
 
 const IconSwitchExample = () =>
   <div style={{ fontSize: '3rem'}}>
-    <Sunrise   caption="Light" captionStyle={{ fontSize: '0.5em' }}/>
-    <Nightfall caption="Dark"  captionStyle={{ fontSize: '0.5em' }}/>
+    <Sunrise
+      caption="Light"
+      captionStyle={{ fontSize: '0.5em' }}
+    />
+    <Nightfall
+      caption="Dark"
+      captionStyle={{ fontSize: '0.5em' }}
+    />
   </div>
 
 export default IconSwitchExample

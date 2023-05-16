@@ -2,7 +2,7 @@ import React from 'react'
 import { Nightfall, Sunrise, useTheme } from '../../lib/index.jsx'
 
 {/* START */}
-// PRETEND: import { useTheme } from '@abw/react-night-and-day'
+// PRETEND: import { Sunrise, Nightfall, useTheme } from '@abw/react-night-and-day'
 
 const Demo = () => {
   const {

@@ -12,7 +12,6 @@ const UseThemePage = () =>
       returns an object that contains various data items relating the current
       theme and a number of functions to set the theme.
     </p>
-
     <Example
       Element={UseTheme} code={UseThemeSrc}
       caption="useTheme()" expand
