@@ -1,5 +1,4 @@
 import React from 'react'
-import { CAPTION, INLINE_BLOCK, SWITCHER } from '../Constants.jsx'
 
 export const Switcher = ({
   Icon,
@@ -8,9 +7,9 @@ export const Switcher = ({
   iconClass,
   iconStyle,
   captionStyle,
-  className=SWITCHER,
-  captionClass=CAPTION,
-  style={ display: INLINE_BLOCK }
+  className='night-and-day--switcher',
+  captionClass='night-and-day--caption',
+  style={ display: 'inline-block' }
 }) =>
   <div className={className} onClick={onClick} style={style}>
     <Icon style={iconStyle} className={iconClass}/>

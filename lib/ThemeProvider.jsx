@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Context from './Context.jsx'
-// import { CHANGE, DARK, LIGHT, PREFERS_DARK } from './Constants.jsx'
 
 const DARK       = 'dark'
 const LIGHT      = 'light'
-const CHANGE     = 'change'
 const PREFERS    = '(prefers-color-scheme: dark)'
 const getTheme   = () => window?.matchMedia?.(PREFERS).matches
 const Storage    = window?.localStorage
@@ -41,8 +39,8 @@ export const ThemeProvider = ({storageKey, defaultVariant, children}) => {
     () => {
       if (window && window.matchMedia) {
         const darkThemeMq = window.matchMedia(PREFERS)
-        darkThemeMq.addEventListener(CHANGE, listener)
-        return () => darkThemeMq?.removeEventListener(CHANGE, listener)
+        darkThemeMq.addEventListener('change', listener)
+        return () => darkThemeMq?.removeEventListener('change', listener)
       }
     },
     []
