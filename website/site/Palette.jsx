@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTheme } from '../../lib/NightAndDay.jsx'
+import { useTheme } from '../../lib/index.jsx'
 
 const Palette = () =>
   <div className="palette">

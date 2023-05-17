@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from './Sidebar.jsx'
+import Header from './Header.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
 import { Outlet } from 'react-router-dom'
-import { useTheme } from '../../lib/NightAndDay.jsx'
-import Header from './Header.jsx'
+import { useTheme } from '../../lib/index.jsx'
 
 const Layout = () => {
   const { theme, variant } = useTheme()

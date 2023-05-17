@@ -1,16 +1,16 @@
 import React from 'react'
-import { CAPTION, SWITCHER } from '../Constants.jsx'
+import { CAPTION, INLINE_BLOCK, SWITCHER } from '../Constants.jsx'
 
 export const Switcher = ({
   Icon,
   caption,
   onClick,
-  style={ display: 'inline-block' },
   iconClass,
   iconStyle,
   captionStyle,
-  className = SWITCHER,
-  captionClass = CAPTION,
+  className=SWITCHER,
+  captionClass=CAPTION,
+  style={ display: INLINE_BLOCK }
 }) =>
   <div className={className} onClick={onClick} style={style}>
     <Icon style={iconStyle} className={iconClass}/>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Sun from './Sun.jsx'
 import Switcher from './Switcher.jsx'
-import { useTheme } from '../NightAndDay.jsx'
+import { useTheme } from '../index.jsx'
 
 export const Sunrise = (props) => {
   const { setLight } = useTheme()

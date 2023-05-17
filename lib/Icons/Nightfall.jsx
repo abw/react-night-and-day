@@ -1,7 +1,7 @@
 import React from 'react'
 import Moon from './Moon.jsx'
 import Switcher from './Switcher.jsx'
-import { useTheme } from '../NightAndDay.jsx'
+import { useTheme } from '../index.jsx'
 
 export const Nightfall = (props) => {
   const { setDark } = useTheme()

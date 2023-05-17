@@ -1,16 +1,17 @@
-import React, { useState, useEffect, createContext, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
+import Context from './Context.jsx'
+// import { CHANGE, DARK, LIGHT, PREFERS_DARK } from './Constants.jsx'
 
-const DARK         = 'dark'
-const LIGHT        = 'light'
-const CHANGE       = 'change'
-const PREFERS_DARK = '(prefers-color-scheme: dark)'
-const getTheme     = () => window?.matchMedia?.(PREFERS_DARK).matches
-const Storage      = window?.localStorage
-const splitTheme   = saved => saved.split(' ')
-const joinTheme    = (theme, variant='') => `${theme} ${variant}`
-const Context      = createContext()
+const DARK       = 'dark'
+const LIGHT      = 'light'
+const CHANGE     = 'change'
+const PREFERS    = '(prefers-color-scheme: dark)'
+const getTheme   = () => window?.matchMedia?.(PREFERS).matches
+const Storage    = window?.localStorage
+const splitTheme = saved => saved.split(' ')
+const joinTheme  = (theme, variant='') => `${theme} ${variant}`
 
-const NightAndDay = ({storageKey, defaultVariant}) => {
+export const ThemeProvider = ({storageKey, defaultVariant, children}) => {
   const saved = storageKey
     ? Storage?.getItem(storageKey)
     : null
@@ -39,7 +40,7 @@ const NightAndDay = ({storageKey, defaultVariant}) => {
   useEffect(
     () => {
       if (window && window.matchMedia) {
-        const darkThemeMq = window.matchMedia(PREFERS_DARK)
+        const darkThemeMq = window.matchMedia(PREFERS)
         darkThemeMq.addEventListener(CHANGE, listener)
         return () => darkThemeMq?.removeEventListener(CHANGE, listener)
       }
@@ -51,8 +52,7 @@ const NightAndDay = ({storageKey, defaultVariant}) => {
   const toggleTheme = () => saveDark(! isDark)
   const setLight    = () => saveDark(false)
   const setDark     = () => saveDark(true)
-
-  return {
+  const context     = {
     isDark,
     isLight: ! isDark,
     setDark, setLight, setIsDark,
@@ -60,13 +60,10 @@ const NightAndDay = ({storageKey, defaultVariant}) => {
     theme: isDark ? DARK : LIGHT,
     variant, setVariant
   }
+
+  return (
+    <Context.Provider value={context}>
+      {children}
+    </Context.Provider>
+  )
 }
-
-export const ThemeProvider = ({children, ...props}) =>
-  <Context.Provider value={NightAndDay(props)}>
-    {children}
-  </Context.Provider>
-
-export const useTheme = () => useContext(Context)
-
-export default NightAndDay

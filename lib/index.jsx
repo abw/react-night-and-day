@@ -1,2 +1,3 @@
 export * from './Icons/index.jsx'
-export * from './NightAndDay.jsx'
+export * from './Context.jsx'
+export * from './ThemeProvider.jsx'

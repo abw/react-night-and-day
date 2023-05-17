@@ -4,11 +4,11 @@ import { CURRENT_COLOR, ICON } from '../Constants.jsx'
 export const Icon = ({
   path,
   onClick,
-  width = 512,
-  height = 512,
-  className = ICON,
-  fill = CURRENT_COLOR,
-  style = { },
+  width=512,
+  height=512,
+  className=ICON,
+  fill=CURRENT_COLOR,
+  style,
 }) =>
   <svg
     aria-hidden="true" focusable="false"
