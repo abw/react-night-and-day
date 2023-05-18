@@ -40,7 +40,8 @@ const Home = () =>
       <li><Link to="variants"><code>variant</code> and <code>setVariant</code></Link> - define variations on a theme</li>
       <li><Link to="storage-key"><code>storageKey</code></Link> - save theme selection in local storage</li>
       <li><Link to="css-properties">CSS Custom Properties</Link> - how to change styling based on the theme</li>
-      <li><Link to="icons">Icons</Link> - icons to display and toggle theme</li>
+      <li><Link to="icons">Theme Icons</Link> - icons to represent themes</li>
+      <li><Link to="switchers">Theme Switchers</Link> - icon switchers to change theme</li>
     </ul>
     <div className="badger">
       <Badger/>
