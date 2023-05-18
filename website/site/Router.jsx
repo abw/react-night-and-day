@@ -10,6 +10,7 @@ import StorageKey from '../pages/storageKey.jsx'
 import Variants from '../pages/Variants.jsx'
 import CSSProperties from '../pages/CSSProperties.jsx'
 import Icons from '../pages/Icons.jsx'
+import Switchers from '../pages/Switchers.jsx'
 
 export const Router = createBrowserRouter(
   [
@@ -26,6 +27,7 @@ export const Router = createBrowserRouter(
         { path: 'variants', element: <Variants/> },
         { path: 'css-properties', element: <CSSProperties/> },
         { path: 'icons', element: <Icons/> },
+        { path: 'switchers', element: <Switchers/> },
       ]
     },
   ],

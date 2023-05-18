@@ -16,7 +16,8 @@ const Sidebar = () =>
         <li><Link to="variants">variant and setVariant()</Link></li>
         <li><Link to="storage-key">storageKey</Link></li>
         <li><Link to="css-properties">CSS Custom Properties</Link></li>
-        <li><Link to="icons">Icons</Link></li>
+        <li><Link to="icons">Theme Icons</Link></li>
+        <li><Link to="switchers">Theme Switchers</Link></li>
       </ul>
     </div>
     <footer>

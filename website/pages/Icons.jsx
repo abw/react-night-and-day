@@ -1,10 +1,6 @@
 import React             from 'react'
 import Icons             from '../examples/Icons.jsx'
 import IconsSrc          from '../examples/Icons.jsx?raw'
-import Switchers         from '../examples/Switchers.jsx'
-import SwitchersSrc      from '../examples/Switchers.jsx?raw'
-import SwitchCaption     from '../examples/SwitchCaption.jsx'
-import SwitchCaptionSrc  from '../examples/SwitchCaption.jsx?raw'
 import IconStyles        from '../examples/IconStyles.jsx'
 import IconStylesSrc     from '../examples/IconStyles.jsx?raw'
 import ImportCSS         from '../examples/ImportCSS?raw'
@@ -14,7 +10,7 @@ import CodeBlock         from '../site/CodeBlock.jsx'
 
 const IconsPage = () =>
   <div>
-    <h1>Icons</h1>
+    <h1>Theme Icons</h1>
     <p>
       The <code>Sun</code> and <code>Moon</code> components are provided to
       render icons of the Sun and Moon, respectively.  These icons are from
@@ -43,32 +39,6 @@ const IconsPage = () =>
       expand
     />
 
-    <p>
-      The <code>Sunrise</code> and <code>Nightfall</code> components are
-      theme switchers that use these icons.
-    </p>
-    <Example
-      Element={Switchers}
-      code={SwitchersSrc}
-      caption="Sunrise and Nightfall"
-      expand
-    />
-
-    <p>
-      The <code>caption</code> property can be used to add a caption to these
-      components.  They also support <code>className</code> (defaults to{' '}
-      <code>night-and-day--switcher</code>), <code>iconClass</code> (defaults to{' '}
-      <code>night-and-day--icon</code>), <code>captionClass</code> (defaults to{' '}
-      <code>night-and-day--caption</code>), <code>style</code>, <code>iconStyle</code>{' '}
-      and <code>captionStyle</code> properties to set CSS classes or styles
-      for each of the elements.
-    </p>
-    <Example
-      Element={SwitchCaption}
-      code={SwitchCaptionSrc}
-      caption="Switch Captions"
-      expand
-    />
     <p>
       If you&apos;re using the default CSS classes then you&apos;ll need to
       add (and possibly adapt) some CSS rules to target them.
