@@ -3,6 +3,8 @@ import Switchers         from '../examples/Switchers.jsx'
 import SwitchersSrc      from '../examples/Switchers.jsx?raw'
 import SwitchCaption     from '../examples/SwitchCaption.jsx'
 import SwitchCaptionSrc  from '../examples/SwitchCaption.jsx?raw'
+import Toggle            from '../examples/Toggle.jsx'
+import ToggleSrc         from '../examples/Toggle.jsx?raw'
 import Example           from '../site/Example.jsx'
 
 const SwitchersPage = () =>
@@ -32,6 +34,17 @@ const SwitchersPage = () =>
       Element={SwitchCaption}
       code={SwitchCaptionSrc}
       caption="Switch Captions"
+      expand
+    />
+    <p>
+      The <code>Toggle</code> component is an all-in-one solution to display
+      either <code>Sunrise</code> or <code>Nightfall</code> to allow you
+      to switch between themes.
+    </p>
+    <Example
+      Element={Toggle}
+      code={ToggleSrc}
+      caption="Toggle"
       expand
     />
   </div>
