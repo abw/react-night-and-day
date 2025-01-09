@@ -31,9 +31,9 @@
     "build:lib": "vite build",
     "build:docs": "vite build --config vite.docs.js",
     "preview": "vite preview --config vite.docs.js",
-    "lint": "eslint 'src/**/*.{js,jsx}' 'lib/**/*.{js,jsx}'"
+    "lint": "eslint 'lib/**/*.{js,jsx,ts,tsx}'"
   },
-  "homepage": "https://abw.github.io/react-night-and-day/",
+  "homepage": "https://badgerpower.com/react-night-and-day/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abw/react-night-and-day.git"
