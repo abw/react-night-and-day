@@ -6,6 +6,7 @@ import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [react(), svgr(), dts()],
+  publicDir: 'website/public',
   define,
   test: {
     environment: 'jsdom',
