@@ -2,7 +2,7 @@ import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { Provider, Buttons, Status } from './lib/index.jsx'
+import { Provider, Buttons, Status } from './lib/index'
 
 it(
   'can toggle themes',

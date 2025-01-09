@@ -1,7 +1,7 @@
 import React from 'react'
-import Sunrise from './Sunrise.jsx'
-import Nightfall from './Nightfall.jsx'
-import { useTheme } from '../index.jsx'
+import Sunrise from './Sunrise'
+import Nightfall from './Nightfall'
+import { useTheme } from '../Context'
 
 export const Toggle = ({
   sunrise = { },

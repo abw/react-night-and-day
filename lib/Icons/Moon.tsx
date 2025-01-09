@@ -1,7 +1,7 @@
 import React from 'react'
-import Icon from './Icon.jsx'
+import Icon, { IconPropsWithoutPath } from './Icon.js'
 
-export const Moon = (props) =>
+export const Moon = (props: IconPropsWithoutPath) =>
   <Icon
     path="M289,23C160,23 56,127 56,256C56,385 160,489 289,489C352,489 409,464 451,423C456,418 457,411 454,404C451,397 444,394 436,395C426,397 416,397 405,397C304,397 222,316 222,214C222,146 260,86 315,55C322,51 325,44 323,37C322,30 316,25 309,24C302,23 295,23 289,23L289,23Z"
     {...props}

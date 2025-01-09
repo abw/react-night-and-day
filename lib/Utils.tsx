@@ -1,4 +1,4 @@
-import { PREFERS_DARK } from './Constants.jsx'
+import { PREFERS_DARK } from './Constants'
 
 const doNothing = () => false
 
@@ -6,9 +6,9 @@ const fakeLocalStorage = () => {
   let store = { }
   return {
     clear: () => (store = {}),
-    getItem: (key) => store[key],
-    setItem: (key, value) => (store[key] = value),
-    removeItem: (key) => delete store[key],
+    getItem: (key: string) => store[key],
+    setItem: (key: string, value: unknown) => (store[key] = value),
+    removeItem: (key: string) => delete store[key],
   }
 }
 
@@ -23,9 +23,9 @@ export const localStorage = (hasWindow && window.localStorage)
   ? window.localStorage
   : fakeLocalStorage()
 export const matchMedia   = (hasWindow && window.matchMedia)
-  ? item => window.matchMedia(item)
+  ? (item: string) => window.matchMedia(item)
   : fakeMatchMedia
 export const prefersDark  = matchMedia(PREFERS_DARK)
 export const getTheme     = () => prefersDark.matches
-export const splitTheme   = saved => saved.split(' ')
-export const joinTheme    = (theme, variant='') => `${theme} ${variant}`
+export const splitTheme   = (saved: string) => saved.split(' ')
+export const joinTheme    = (theme: string, variant='') => `${theme} ${variant}`

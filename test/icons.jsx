@@ -2,7 +2,7 @@ import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { Provider, Switchers, Status } from './lib/index.jsx'
+import { Provider, Switchers, Status } from './lib/index'
 
 it(
   'can toggle themes',
@@ -42,6 +42,5 @@ it(
     expect(theme).toHaveTextContent('light')
     expect(isDark).toHaveTextContent('no')
     expect(isLight).toHaveTextContent('yes')
-
   }
 )

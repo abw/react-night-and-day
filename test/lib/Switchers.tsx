@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sunrise, Nightfall } from '../../lib/index.jsx'
+import { Sunrise, Nightfall } from '../../lib/index'
 
 export const Switchers = () =>
   <>

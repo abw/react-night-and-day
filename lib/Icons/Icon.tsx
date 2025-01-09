@@ -1,5 +1,17 @@
 import React from 'react'
 
+export type IconProps = {
+  path: string,
+  width?: number,
+  height?: number,
+  className?: string,
+  fill?: string,
+  onClick?: () => void,
+  style?: React.CSSProperties,
+}
+export type IconPropsWithoutPath = Omit<IconProps, 'path'>
+export type IconComponent = (props: IconPropsWithoutPath) => React.JSX.Element
+
 export const Icon = ({
   path,
   onClick,
@@ -8,7 +20,7 @@ export const Icon = ({
   style,
   className='night-and-day--icon',
   fill='currentColor'
-}) =>
+}: IconProps) =>
   <svg
     aria-hidden="true" focusable="false"
     className={className} style={style}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sun, Moon } from '../../lib/index.jsx'
+import { Sun, Moon } from '../../lib/index'
 
 export const Icons = () =>
   <>

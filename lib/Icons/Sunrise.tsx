@@ -1,9 +1,11 @@
 import React from 'react'
-import Sun from './Sun.jsx'
-import Switcher from './Switcher.jsx'
+import Sun from './Sun'
+import Switcher, { SwitcherProps } from './Switcher'
 import { useTheme } from '../index.jsx'
 
-export const Sunrise = (props) => {
+export const Sunrise = (
+  props: Omit<SwitcherProps, 'Icon'>
+) => {
   const { setLight } = useTheme()
   return (
     <Switcher
