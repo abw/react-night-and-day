@@ -8,10 +8,14 @@
   ],
   "main": "./dist/react-night-and-day.umd.cjs",
   "module": "./dist/react-night-and-day.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-night-and-day.js",
-      "require": "./dist/react-night-and-day.umd.cjs"
+      "require": "./dist/react-night-and-day.umd.cjs",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/react-night-and-day.js"
+      }
     },
     "./styles/*": "./dist/styles/*"
   },
