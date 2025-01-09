@@ -1,6 +1,6 @@
 {
   "name": "@abw/react-night-and-day",
-  "version": "0.0.6",
+  "version": "1.0.0-alpha-1",
   "description": "A simple React library for switching between light and dark themes",
   "type": "module",
   "files": [
