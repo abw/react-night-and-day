@@ -13,7 +13,6 @@ export default defineConfig({
     include: ['test/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     exclude: ['test/setup.js', 'test/lib'],
     coverage: {
-      provider: 'c8',
       reporter: ['html']
     }
   },

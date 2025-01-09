@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './Link.jsx'
 import { Toggle } from '../../lib/index.jsx'
 import Palette from './Palette.jsx'
-import { ReactComponent as Github } from '../svg/github.svg'
+import Github from '../svg/github.svg?react'
 
 const Header = () =>
   <header className="site">

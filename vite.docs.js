@@ -5,7 +5,13 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: '/react-night-and-day/',
-  define
+  define,
+  root: 'website',
+  base: '/react-night-and-day',
+  envDir: '../',
+  build: {
+    emptyOutDir: true,
+    outDir: '../docs'
+  },
 })
 

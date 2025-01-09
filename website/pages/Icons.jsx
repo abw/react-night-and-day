@@ -4,7 +4,7 @@ import IconsSrc          from '../examples/Icons.jsx?raw'
 import IconStyles        from '../examples/IconStyles.jsx'
 import IconStylesSrc     from '../examples/IconStyles.jsx?raw'
 import ImportCSS         from '../examples/ImportCSS?raw'
-import CSSStyles         from '../../public/styles/night-and-day.css?raw'
+import CSSStyles         from '../public/styles/night-and-day.css?raw'
 import Example           from '../site/Example.jsx'
 import CodeBlock         from '../site/CodeBlock.jsx'
 

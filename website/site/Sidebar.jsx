@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from './Link.jsx'
 import { date, version } from './Utils.jsx'
-import { ReactComponent as Abw } from '../svg/abw.svg'
+import Abw from '../svg/abw.svg?react'
 
 const Sidebar = () =>
   <>

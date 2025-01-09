@@ -1,8 +1,8 @@
-import React      from 'react'
-import Link       from '../site/Link.jsx'
-import Demo       from '../examples/Demo.jsx'
-import { ReactComponent as Badger } from '../svg/badger.svg'
-import { ReactComponent as NightAndDay } from '../svg/night-and-day.svg'
+import React       from 'react'
+import Link        from '../site/Link.jsx'
+import Demo        from '../examples/Demo.jsx'
+import Badger      from '../svg/badger.svg?react'
+import NightAndDay from '../svg/night-and-day.svg?react'
 
 const Home = () =>
   <div className="">
