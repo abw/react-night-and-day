@@ -1,4 +1,3 @@
-import React from 'react'
 import Icon, { IconPropsWithoutPath } from './Icon.js'
 
 export const Sun = (props: IconPropsWithoutPath) =>

@@ -1,4 +1,3 @@
-import React from 'react'
 import Sunrise from './Sunrise'
 import Nightfall from './Nightfall'
 import { useTheme } from '../Context'

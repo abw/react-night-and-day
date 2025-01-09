@@ -1,4 +1,3 @@
-import React from 'react'
 import Sun from './Sun'
 import Switcher, { SwitcherProps } from './Switcher'
 import { useTheme } from '../index.jsx'

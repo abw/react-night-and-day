@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Context from './Context.js'
 import { DARK, LIGHT } from './Constants.js'
+import { EffectCallback } from 'react'
+import { doNothing, isString } from '@abw/badger-utils'
 import {
   localStorage, prefersDark,
   getTheme, splitTheme, joinTheme
 } from './Utils.js'
-import { EffectCallback } from 'react'
-import { doNothing } from '@abw/badger-utils'
 
 export type ContextData = {
   isDark: boolean,
@@ -45,7 +45,7 @@ export const ThemeProvider = ({
   const saved = storageKey
     ? localStorage.getItem(storageKey)
     : null
-  const [savedTheme, savedVariant=''] = saved
+  const [savedTheme, savedVariant=''] = isString(saved)
     ? splitTheme(saved)
     : [getTheme(), null]
 
@@ -72,12 +72,16 @@ export const ThemeProvider = ({
   }
 
   // register a listener to watch for changes in preference
-  const listener = e => saveDark(e.matches)
+  const listener = (e: MediaQueryListEvent) => saveDark(e.matches)
   useEffect(
     (): ReturnType<EffectCallback> => {
-      prefersDark.addEventListener('change', listener)
-      return (): void => {
-        prefersDark.removeEventListener('change', listener)
+      if (prefersDark) {
+        prefersDark.addEventListener('change', listener)
+        return (): void => {
+          if (prefersDark) {
+            prefersDark.removeEventListener('change', listener)
+          }
+        }
       }
     },
     []
