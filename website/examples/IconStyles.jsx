@@ -1,4 +1,4 @@
-import { Sun, Moon } from '../../lib/index.jsx'
+import { Sun, Moon } from '../../lib/index'
 {/* START */}
 import React from 'react'
 // PRETEND: import { Sun, Moon } from '@abw/react-night-and-day'

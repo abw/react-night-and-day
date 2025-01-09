@@ -1,4 +1,4 @@
-import { useTheme } from '../../lib/index.jsx'
+import { useTheme } from '../../lib/index'
 {/* START */}
 import React from 'react'
 // PRETEND: import { useTheme } from '@abw/react-night-and-day'

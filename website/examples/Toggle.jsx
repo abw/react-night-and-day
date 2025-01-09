@@ -1,4 +1,4 @@
-import { Toggle } from '../../lib/index.jsx'
+import { Toggle } from '../../lib/index'
 {/* START */}
 import React from 'react'
 // PRETEND: import { Toggle } from '@abw/react-night-and-day'

@@ -1,4 +1,4 @@
-import { Sunrise, Nightfall } from '../../lib/index.jsx'
+import { Sunrise, Nightfall } from '../../lib/index'
 {/* START */}
 import React from 'react'
 // PRETEND: import { Sunrise, Nightfall } from '@abw/react-night-and-day'

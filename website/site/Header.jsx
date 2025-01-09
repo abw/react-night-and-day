@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from './Link.jsx'
-import { Toggle } from '../../lib/index.jsx'
 import Palette from './Palette.jsx'
 import Github from '../svg/github.svg?react'
+import { Toggle } from '../../lib/index'
 
 const Header = () =>
   <header className="site">

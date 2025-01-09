@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nightfall, Sunrise, useTheme } from '../../lib/index.jsx'
+import { Nightfall, Sunrise, useTheme } from '../../lib/index'
 
 {/* START */}
 // PRETEND: import { Sunrise, Nightfall, useTheme } from '@abw/react-night-and-day'

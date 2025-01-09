@@ -5,7 +5,7 @@ import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
 import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import { useTheme } from '../../lib/index.jsx'
+import { useTheme } from '../../lib/index'
 import { sleep } from '@abw/badger-utils'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx)
